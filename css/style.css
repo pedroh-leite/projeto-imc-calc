@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+:root{
+    --dark-blue: #090e22;
+    --mid-blue: #1d1e33;
+    --grey: #444;
+    --ultralight-grey: #ccc;
+    --white: #ffffff;
+    --salmon: #f44236;
+    --red: #db1912;
+    --orange: #db6212;
+    --yellow: #dbce12; 
+    --green: #12db34;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body{
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white);
+}
+
+.hide{
+    display: none !important;
+}
+
+.container {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: var(--mid-blue);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.219);
+}
+
+/* IMC Form */
+#calc-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: .6rem;
+    color: var(--ultralight-grey);
+}
+
+.form-control input{
+    padding: 1rem .5rem;
+}
+
+.action-control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+button {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: var(--salmon);
+    border: none;
+    border-radius: 6px;
+    color: var(--white);
+    cursor: pointer;
+    opacity: .9;
+    flex: 1;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#clear-btn {
+    background-color: var(--grey);
+}
+
+/* TABLE */
+
+#result-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#imc-number{
+    font-size: 2.4rem;
+    margin-bottom: .6rem;
+}
+
+#imc-info{
+    font-size: 1.4rem;
+    color: var(--ultralight-grey);
+}
+
+#result-container h3 {
+    margin-top: 1rem;
+    color: var(--white);
+}
+
+#imc-table {
+    margin: 1.5rem 0;
+    font-size: .8rem; 
+}
+
+.table-header{
+    font-weight: bold;
+    color: var(--ultralight-grey);
+}
+
+.table-header,
+.table-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--grey);
+}
+
+.table-header h4,
+.table-data p {
+    flex: 1;
+}
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3) {
+    max-width: 80px;
+}
+
+#back-btn{
+    align-self: center;
+}
+
+.good{
+    color: var(--green);
+}
+
+.low{
+    color: var(--yellow);
+}
+
+.medium{
+    color: var(--orange);
+}
+
+.high{
+    color: var(--red);
+}
